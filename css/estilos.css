@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Nunito:wght@300;400;700&display=swap');
+:root {
+    --rojo: #C62828;
+    --naranja: #F57C00;
+    --amarillo: #F9A825;
+    --verde: #2E7D32;
+    --crema: #FFF8E1;
+    --marron: #bed45a;
+    --blanco: #fff;
+
+    --gradiente: linear-gradient(135deg, #C62828, #F57C00, #F9A825);
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.navbar-brand img.logo {
+    margin-right: 10px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.menuPrincipal{
+    background: rgba(0,0,0,.75); /* oscuro elegante */
+    backdrop-filter: blur(10px);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(.55);
+    animation: zoom 18s infinite alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.12);
+    }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, .65),
+            rgba(198, 40, 40, .35),
+            rgba(0, 0, 0, .75));
+    z-index: 2;
+}
+
+/* HERO CONTENIDO */
+.heroContenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 100%;
+}
+
+.heroContenido h1 {
+    font-size: 65px;
+    font-weight: 900;
+    color: white;
+    animation: entrada 1.5s ease;
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heroContenido h1 span {
+    color: var(--amarillo);
+}
+
+.heroContenido p {
+    color: white;
+    font-size: 20px;
+    max-width: 650px;
+}
+
+/* ETIQUETA */
+.etiqueta {
+    display: inline-block;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+}
+
+/* HERO CARD */
+.heroCard {
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(18px);
+    border-radius: 25px;
+    padding: 30px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+}
+
+.heroCard h3 {
+    margin-bottom: 20px;
+}
+
+.dato {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dato i {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #F9A825, #F57C00);
+    margin-right: 15px;
+    font-size: 24px;
+}
+
+.dato h4 {
+    margin: 0;
+    color: var(--amarillo);
+    font-size: 28px;
+}
+
+/* FONDO CULTURA */
+.fondoPatron {
+    background:
+        radial-gradient(circle at top left, #F9A82533, transparent 40%),
+        radial-gradient(circle at bottom right, #2E7D3233, transparent 40%),
+        var(--crema);
+}
+
+/* IMAGEN CULTURA */
+.imagenCultura {
+    width: 100%;
+    border-radius: 25px;
+    transition: .5s;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+}
+
+.imagenCultura:hover {
+    transform: scale(1.04) rotate(-1deg);
+}
+
+/* MINI CARDS */
+.miniCard {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    transition: .4s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.miniCard:hover {
+    transform: translateY(-10px);
+    background: var(--gradiente);
+    color: white;
+}
+
+.miniCard i {
+    font-size: 40px;
+    color: var(--naranja);
+    margin-bottom: 10px;
+}
+
+.miniCard:hover i {
+    color: white;
+}
+
+/* CONTADOR */
+.contador {
+    background: var(--gradiente);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.iconoContador {
+    font-size: 55px;
+    color: #FFD54F;
+    margin-bottom: 15px;
+}
+
+.numero {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+/* OPCIONES */
+.opcion {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 22px;
+    text-align: center;
+    transition: .4s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+}
+
+.opcion:hover {
+    transform: translateY(-10px);
+}
+
+.opcion i {
+    font-size: 55px;
+    color: var(--rojo);
+    margin-bottom: 15px;
+}
+
+/* JUEGOS */
+.juegosDestacados {
+    background: #fff;
+}
+
+.cardJuego {
+    border-radius: 25px;
+    overflow: hidden;
+    transition: .4s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+.cardJuego:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+.cardJuego img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.cardJuego:hover img {
+    transform: scale(1.1);
+}
+
+.contenidoJuego {
+    padding: 20px;
+}
+
+/* LOGROS */
+.logros {
+    background: var(--gradiente);
+    color: white;
+}
+
+.insignia {
+    background: rgba(255, 255, 255, .15);
+    border-radius: 25px;
+    padding: 35px;
+    transition: .4s;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.insignia:hover {
+    transform: translateY(-12px);
+    background: white;
+    color: var(--rojo);
+}
+
+.cta {
+    background: linear-gradient(135deg, #2E7D32, #4CAF50);
+    color: white;
+}
+
+.cta h2 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+/* FOOTER */
+.footer {
+    background: #2b1d13;
+    color: white;
+    padding: 80px 0 20px;
+}
+.footerLogo{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer a:hover {
+    color: var(--amarillo);
+    padding-left: 5px;
+}
+
+.redes a {
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--rojo);
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.redes a:hover {
+    background: var(--amarillo);
+    transform: translateY(-5px);
+}
+
+/* BOTÓN ARRIBA */
+#btnArriba {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: var(--gradiente);
+    color: white;
+    display: none;
+    transition: .4s;
+    z-index: 999;
+}
+
+#btnArriba:hover {
+    transform: scale(1.12);
+}
+
+/* BOTONES */
+.btnExplorar,
+.btnMapa,
+.btnOpcion,
+.btnGrande {
+    background: lightskyblue !important;
+    color: #000 !important;
+    border: 2px solid rgba(0, 0, 0, .3);
+    box-shadow: none;
+}
+
+.btnMapa:hover,
+.btnOpcion:hover,
+.btnGrande:hover {
+    background: rgba(0, 0, 0, .05) !important;
+    color: #000 !important;
+    transform: translateY(-4px);
+    border-color: rgba(0, 0, 0, .6);
+}
+
+.btnExplorar i,
+.btnMapa i,
+.btnOpcion i,
+.btnGrande i {
+    color: #251196;
+}
+
+/* RESPONSIVE */
+@media(max-width:991px) {
+    .heroContenido h1 {
+        font-size: 42px;
+    }
+
+    .heroCard {
+        margin-top: 30px;
+    }
+
+    .numero {
+        font-size: 40px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:768px) {
+    .heroContenido h1 {
+        font-size: 32px;
+    }
+
+    .btnMapa,
+    .btnExplorar {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

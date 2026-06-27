@@ -1,0 +1,88 @@
+body {
+    background: #f8f9fa;
+}
+
+.cardJuego {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: .4s;
+}
+
+.cardJuego:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.cardJuego img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;   /* 🔥 clave para que no se deforme */
+    transition: .5s;
+}
+
+.cardJuego:hover img {
+    transform: scale(1.08);
+}
+
+.contenidoJuego {
+    padding: 20px;
+    text-align: center;
+}
+
+.contenidoJuego h4 {
+    font-weight: 800;
+    color: #C62828;
+    margin-bottom: 10px;
+}
+
+.contenidoJuego p {
+    color: #555;
+    font-size: 14px;
+}
+
+.btnOpcion {
+    background: linear-gradient(135deg, #C62828, #F57C00);
+    color: white !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btnOpcion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#zonaJuego {
+    min-height: 200px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* cartas dentro del juego */
+.cartaJuego {
+    background: #fff3e0;
+    border-left: 6px solid #C62828;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+
+    .cardJuego img {
+        height: 160px;
+    }
+
+    .contenidoJuego h4 {
+        font-size: 18px;
+    }
+}

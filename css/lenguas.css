@@ -1,0 +1,292 @@
+:root {
+    --rojo: #C62828;
+    --naranja: #F57C00;
+    --amarillo: #F9A825;
+    --verde: #2E7D32;
+    --crema: #FFF8E1;
+    --blanco: #fff;
+
+    --gradiente: linear-gradient(135deg, #C62828, #F57C00, #F9A825);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--crema);
+
+    /* 🔥 ESTO EVITA QUE EL HEADER TAPE TODO */
+    padding-top: 110px;
+}
+
+.menuPrincipal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(0,0,0,.85);
+    backdrop-filter: blur(10px);
+}
+
+.bannerLenguas {
+    margin-top: 0; /* ❌ quitamos conflicto */
+    min-height: 520px;
+
+    background:
+        linear-gradient(rgba(13, 71, 161, .75),
+        rgba(183, 28, 28, .75)),
+        url("../media/img/lengua.jpg") center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.overlayBanner {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.bannerLenguas h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    animation: subir 1s ease;
+}
+
+.bannerLenguas p {
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+/* ================= SUBTÍTULO ================= */
+.subtitulo {
+    display: inline-block;
+    background: var(--amarillo);
+    color: white;
+    padding: 8px 22px;
+    border-radius: 40px;
+    font-weight: bold;
+    animation: latido 2s infinite;
+}
+
+/* ================= BUSCADOR ================= */
+.buscadorLenguas {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,.2);
+}
+
+.buscadorLenguas h3 {
+    color: var(--rojo);
+}
+
+.buscadorLenguas input {
+    height: 55px;
+    border-radius: 12px;
+}
+
+.catalogoLenguas {
+    background: #FFF8F1;
+}
+
+.cardLengua {
+    position: relative;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+
+    transition: .4s;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    height: 100%;
+}
+
+/* hover */
+.cardLengua:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 45px rgba(0,0,0,.25);
+}
+
+/* imagen */
+.cardLengua img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.cardLengua:hover img {
+    transform: scale(1.08);
+}
+
+/* contenido */
+.contenidoLengua {
+    padding: 28px;
+}
+
+.contenidoLengua h3 {
+    color: var(--rojo);
+    font-weight: 800;
+}
+
+.contenidoLengua i {
+    color: var(--naranja);
+    margin-right: 8px;
+    transition: .3s;
+}
+
+/* efecto icono */
+.cardLengua:hover i {
+    color: var(--rojo);
+    transform: scale(1.2);
+}
+
+/* ================= EFECTOS VISUALES ================= */
+.cardLengua::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg,
+        #C62828, #F57C00, #F9A825, #2E7D32);
+}
+
+.cardLengua::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(rgba(255,255,255,0),
+        rgba(255,255,255,.08));
+
+    opacity: 0;
+    transition: .4s;
+}
+
+.cardLengua:hover::after {
+    opacity: 1;
+}
+
+/* ================= CURIOSIDADES ================= */
+.curiosidades {
+    background: #fff;
+}
+
+.datoCurioso {
+    display: flex;
+    gap: 18px;
+    margin: 20px 0;
+    padding: 18px;
+
+    border-left: 5px solid var(--naranja);
+    background: #FFF8F1;
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.datoCurioso:hover {
+    transform: translateX(10px);
+    background: #fff3e0;
+}
+
+/* ================= ESTADÍSTICAS ================= */
+.estadisticasLenguas {
+    background: linear-gradient(135deg, var(--rojo), #E65100);
+    padding: 80px 0;
+    color: white;
+}
+
+.estadistica {
+    transition: .3s;
+}
+
+.estadistica:hover {
+    transform: translateY(-10px);
+}
+
+.estadistica h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 0 5px 12px rgba(0,0,0,.3);
+}
+
+/* ================= CTA ================= */
+.ctaLenguas {
+    position: relative;
+    overflow: hidden;
+    background: #FFF3E0;
+    padding: 90px 0;
+}
+
+.ctaLenguas::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(198,40,40,.08);
+    top: -120px;
+    left: -120px;
+}
+
+.ctaLenguas::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(249,168,37,.12);
+    bottom: -120px;
+    right: -120px;
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes latido {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@media(max-width:992px) {
+
+    body {
+        padding-top: 130px;
+    }
+
+    .bannerLenguas {
+        text-align: center;
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .bannerLenguas h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media(max-width:768px) {
+
+    .cardLengua img {
+        height: 220px;
+    }
+
+    .estadistica {
+        margin-bottom: 30px;
+    }
+
+    .ctaLenguas {
+        text-align: center;
+    }
+}

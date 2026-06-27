@@ -1,0 +1,240 @@
+/* Evitar que el header fijo tape contenido */
+body {
+    padding-top: 90px;
+    background: #FFF8E1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bannerAprender {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #C62828, #F57C00, #F9A825);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* efecto decorativo */
+.bannerAprender::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    top: -150px;
+    left: -150px;
+}
+
+.bannerAprender::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    bottom: -120px;
+    right: -120px;
+}
+
+.bannerAprender h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    animation: subir 1s ease;
+}
+
+.bannerAprender p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    opacity: 0.95;
+}
+
+.personajeAprender {
+    max-height: 420px;
+    animation: flotar 4s ease-in-out infinite;
+}
+
+.btnExplorar {
+    background: #fff !important;
+    color: #C62828 !important;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 40px;
+    transition: .4s;
+    border: none;
+}
+
+.btnExplorar:hover {
+    transform: translateY(-5px);
+    background: #ffe0b2 !important;
+}
+
+.selectorLenguas {
+    background: white;
+}
+
+.lengua,
+.lenguaActiva {
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.lengua img,
+.lenguaActiva img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.lengua:hover {
+    transform: translateY(-10px);
+    background: #F9A825;
+    color: white;
+}
+
+.lenguaActiva {
+    background: #C62828;
+    color: white;
+}
+
+.palabra {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: .4s;
+    text-align: center;
+}
+
+.palabra:hover {
+    transform: translateY(-8px);
+}
+
+.palabra h3 {
+    color: #C62828;
+    font-weight: 800;
+}
+
+.btnAudio {
+    background: #F57C00;
+    color: white;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 8px 18px;
+}
+
+.btnAudio:hover {
+    background: #C62828;
+    color: white;
+}
+
+.numeroCard {
+    background: linear-gradient(135deg, #F57C00, #F9A825);
+    color: white;
+    padding: 20px;
+    border-radius: 18px;
+    transition: .4s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.numeroCard:hover {
+    transform: scale(1.08);
+}
+
+.colorCard {
+    padding: 25px;
+    border-radius: 18px;
+    color: white;
+    transition: .4s;
+    font-weight: bold;
+}
+
+.colorCard:hover {
+    transform: translateY(-8px);
+}
+
+.colorCard.rojo { background: #C62828; }
+.colorCard.verde { background: #2E7D32; }
+.colorCard.amarillo { background: #F9A825; color: black; }
+.colorCard.azul { background: #1565C0; }
+
+.fondoClaro {
+    background: #FFF3E0;
+}
+
+.footer {
+    background: #2b1d13;
+    color: white;
+    padding: 70px 0 20px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #F9A825;
+}
+
+.redes a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #C62828;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.redes a:hover {
+    background: #F9A825;
+    transform: translateY(-5px);
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@media (max-width: 992px) {
+
+    .bannerAprender h1 {
+        font-size: 2.2rem;
+    }
+
+    .personajeAprender {
+        margin-top: 20px;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .numeroCard {
+        margin-bottom: 15px;
+    }
+
+    .palabra {
+        margin-bottom: 15px;
+    }
+}

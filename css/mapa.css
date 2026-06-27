@@ -1,0 +1,95 @@
+.mapaBox {
+    background: #FFF8F1;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+}
+
+.mapaImagen {
+    display: block;        /* 🔥 elimina espacio inferior */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 950px;
+    border-radius: 20px;
+    border: 3px solid #C62828;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.mapaImagen:hover {
+    transform: scale(1.08) rotate(1deg);
+}
+.mapaBox {
+    padding: 0;
+    background: transparent;
+}
+/* 🌊 Animación suave flotante */
+@keyframes flotarMapa {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mapaImagen {
+    animation: flotarMapa 5s ease-in-out infinite;
+}
+
+/* 📌 Títulos del mapa */
+.mapaHeader {
+    margin-top: 120px;
+    padding: 40px 0;
+}
+
+.mapaHeader h2 {
+    font-weight: 800;
+    color: #C62828;
+}
+
+/* 📊 Tarjetas de info */
+.infoMapa {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+    transition: 0.3s;
+}
+
+.infoMapa:hover {
+    transform: translateY(-8px);
+    background: #FFF3E0;
+}
+
+.infoMapa h3 {
+    color: #C62828;
+    font-weight: 700;
+}
+
+/* 🎯 Subtítulo */
+.subtitulo {
+    display: inline-block;
+    background: #F9A825;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .mapaImagen {
+        animation: none;
+    }
+
+    .mapaImagen:hover {
+        transform: scale(1.03);
+    }
+}

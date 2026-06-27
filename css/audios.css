@@ -1,0 +1,18 @@
+.card.reproduciendo {
+    border: 2px solid #F57C00;
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(245, 124, 0, 0.4);
+    transition: .3s;
+}
+
+.btnAudio {
+    background: #F57C00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.btnAudio:hover {
+    background: #C62828;
+    transform: translateY(-2px);
+}
